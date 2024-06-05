@@ -1,6 +1,6 @@
 
 
-const Btn = ({label , iconURL , backgroundColor ,textColor,borderColor}) => {
+const Btn = ({label , iconURL , backgroundColor ,textColor,borderColor,fullWidth}) => {
   return (
     <button className={`flex
      justify-center items-center gap-2
@@ -12,7 +12,7 @@ const Btn = ({label , iconURL , backgroundColor ,textColor,borderColor}) => {
 
       ${textColor} ${borderColor}`
       : "bg-coral-red text-white border-coral-red"
-     } rounded-full w-full"}`}
+     } rounded-full ${fullWidth && 'w-full'}"}`}
      >
         {label}
 
